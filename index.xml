@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MoraCyberInsights</title>
+    <link>https://moracyberinsights.github.io/</link>
+    <description>Recent content on MoraCyberInsights</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 17 Jul 2024 22:05:20 -0500</lastBuildDate>
+    <atom:link href="https://moracyberinsights.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Miner</title>
+      <link>https://moracyberinsights.github.io/posts/miner/</link>
+      <pubDate>Wed, 17 Jul 2024 22:05:20 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/miner/</guid>
+      <description>Is your computer mining for someone else’s gold?&#xD;Link to heading&#xD;By Gabriel Mora&#xA;Introduction&#xA;In the ever-evolving landscape of cybersecurity understanding and mitigating attacks is crucial. Recently, my honeypot detected an intriguing crypto-mining attack originating from China. This blog post details my investigation shedding light on the methods used.&#xA;The Incident&#xA;On May 6th, 2024 my honeypot was targeted by a malicious actor attempting to deploy a crypto-mining payload.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://moracyberinsights.github.io/about/</link>
+      <pubDate>Wed, 17 Jul 2024 17:37:14 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/about/</guid>
+      <description>Welcome to Mora Cyber Insights. This is a personal blog where I post overall insights that I wanted to write down. The plan is to post about attack spotlights from a honeypot, CTF writeups, indpendent research, malware analysis, investigation scenarios, and other stuff. All content posted here is personal and does not reflect the view of my employer(s).&#xA;My name is Gabriel Mora and I am a cybersecurity professional. I love learning about Digital Forensics and Incident Reponse as well as the offenside side of things.</description>
+    </item>
+  </channel>
+</rss>
