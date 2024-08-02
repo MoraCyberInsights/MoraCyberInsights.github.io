@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Recon · MoraCyberInsights
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Gabriel Mora">
+<meta name="description" content="Time and Date of Activity 05 May 2024 5:36:11-5:36:12
+Relevant LogsLink to headingThere were 4 firewall logs. All to destination port TCP/23:
+Date Time Source IP Source Port Target IP Target Port Protocol 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 There was 1 telnet log:
+&quot;213.171.36.194&quot;: {&quot;try&quot;: 0, &quot;max&quot;: 1, &quot;user&quot;: &quot;b&#39;ubnt&#39;&quot;, &quot;pw&quot;: &quot;b&#39;ubnt&#39;&quot;}">
+<meta name="keywords" content="blog,cybersecurity,personal">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Recon">
+  <meta name="twitter:description" content="Time and Date of Activity 05 May 2024 5:36:11-5:36:12
+Relevant LogsLink to headingThere were 4 firewall logs. All to destination port TCP/23:
+Date Time Source IP Source Port Target IP Target Port Protocol 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 There was 1 telnet log:
+&#34;213.171.36.194&#34;: {&#34;try&#34;: 0, &#34;max&#34;: 1, &#34;user&#34;: &#34;b&#39;ubnt&#39;&#34;, &#34;pw&#34;: &#34;b&#39;ubnt&#39;&#34;}">
+
+<meta property="og:url" content="https://moracyberinsights.github.io/posts/recon/">
+  <meta property="og:site_name" content="MoraCyberInsights">
+  <meta property="og:title" content="Recon">
+  <meta property="og:description" content="Time and Date of Activity 05 May 2024 5:36:11-5:36:12
+Relevant LogsLink to headingThere were 4 firewall logs. All to destination port TCP/23:
+Date Time Source IP Source Port Target IP Target Port Protocol 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 There was 1 telnet log:
+&#34;213.171.36.194&#34;: {&#34;try&#34;: 0, &#34;max&#34;: 1, &#34;user&#34;: &#34;b&#39;ubnt&#39;&#34;, &#34;pw&#34;: &#34;b&#39;ubnt&#39;&#34;}">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-05T12:30:19-05:00">
+    <meta property="article:modified_time" content="2024-05-05T12:30:19-05:00">
+
+
+
+
+<link rel="canonical" href="https://moracyberinsights.github.io/posts/recon/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://moracyberinsights.github.io/">
+      MoraCyberInsights
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://moracyberinsights.github.io/posts/recon/">
+              Recon
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-05-05T12:30:19-05:00">
+                May 5, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p><strong>Time and Date of Activity</strong> 05 May 2024 5:36:11-5:36:12</p>
+<h3 id="relevant-logs">
+  Relevant Logs
+  <a class="heading-link" href="#relevant-logs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>There were 4 firewall logs. All to destination port TCP/23:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Date</strong></th>
+<th><strong>Time</strong></th>
+<th><strong>Source IP</strong></th>
+<th><strong>Source Port</strong></th>
+<th><strong>Target IP</strong></th>
+<th><strong>Target Port</strong></th>
+<th><strong>Protocol</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024-05-05</td>
+<td>05:36:11</td>
+<td>213.171.36.194</td>
+<td>37640</td>
+<td>172.31.19.98</td>
+<td>23</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2024-05-05</td>
+<td>05:36:11</td>
+<td>213.171.36.194</td>
+<td>46818</td>
+<td>172.31.19.98</td>
+<td>23</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2024-05-05</td>
+<td>05:36:11</td>
+<td>213.171.36.194</td>
+<td>37640</td>
+<td>172.31.19.98</td>
+<td>23</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2024-05-05</td>
+<td>05:36:11</td>
+<td>213.171.36.194</td>
+<td>46818</td>
+<td>172.31.19.98</td>
+<td>23</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>There was 1 telnet log:</p>
+<p>&quot;213.171.36.194&quot;: {&quot;try&quot;: 0, &quot;max&quot;: 1, &quot;user&quot;: &quot;b'ubnt'&quot;,
+&quot;pw&quot;: &quot;b'ubnt'&quot;}</p>
+<p>The username used was &ldquo;ubnt&rdquo; and the password used was &ldquo;ubnt&rdquo;.</p>
+<p>Reviewing all logs for the month of April and May there was no other
+activity originating from this IP (213.171.36.194).</p>
+<p>Firewall data was obtained through the ISC portal.</p>
+<p>To choose the attack to research the &ldquo;playlog&rdquo; feature of the honeypot
+was used to investigate some attacks that took place.</p>
+<p>python3 /srv/cowrie/bin/playlog
+/srv/cowrie/var/lib/cowrie/tty/4fd14db24d236abacec4a4026120c137d9f61f66c7505d0d8fcc28f4cc2afe14</p>
+<p>This &ldquo;playlog&rdquo; looked interesting and I decided to gather further logs
+by looking into the &ldquo;cowrie.json&rdquo; logs and using &ldquo;grep&rdquo; to filter for
+the timestamp gathered from the previous finding &ldquo;05:36&rdquo;</p>
+<p>cat /srv/cowrie/var/log/cowrie/cowrie.json | jq | grep &quot;05:36&quot;</p>
+<p>Found the session connect log on line 8797 of the cowrie.json logfile
+and gathered the session ID: &ldquo;4890fc2a58cb&rdquo;.</p>
+<p>The I used grep to filter for all logs with the session ID:</p>
+<p>cat /srv/cowrie/var/log/cowrie/cowrie.json | jq | grep
+&quot;4890fc2a58cb&quot;</p>
+<p>Found 19 logs with that session ID.</p>
+<p>Sample of the logs found using grep to filter by session ID:</p>
+<p>8797: &quot;eventid&quot;: &quot;cowrie.session.connect&quot;,</p>
+<p>8798: &quot;src_ip&quot;: &quot;213.171.36.194&quot;,</p>
+<p>8799: &quot;src_port&quot;: 46818,</p>
+<p>8800: &quot;dst_ip&quot;: &quot;172.31.19.98&quot;,</p>
+<p>8801: &quot;dst_port&quot;: 2223,</p>
+<p>8802: &quot;session&quot;: &quot;4890fc2a58cb&quot;,</p>
+<p>8803: &quot;protocol&quot;: &quot;telnet&quot;,</p>
+<p>8804: &quot;message&quot;: &quot;New connection: 213.171.36.194:46818
+(172.31.19.98:2223) [session: 4890fc2a58cb]&quot;,</p>
+<p>8805: &quot;sensor&quot;: &quot;&quot;,</p>
+<p>8806: &quot;timestamp&quot;: &quot;2024-05-05T05:36:11.828020Z&quot;</p>
+<p>8807:}</p>
+<p>8808:{</p>
+<p>8809: &quot;eventid&quot;: &quot;cowrie.login.success&quot;,</p>
+<p>8810: &quot;username&quot;: &quot;ubnt&quot;,</p>
+<p>8811: &quot;password&quot;: &quot;ubnt&quot;,</p>
+<p>8812: &quot;message&quot;: &quot;login attempt [ubnt/ubnt] succeeded&quot;,</p>
+<p>8813: &quot;sensor&quot;: &quot;&quot;,</p>
+<p>8814: &quot;timestamp&quot;: &quot;2024-05-05T05:36:12.339527Z&quot;,</p>
+<p>8815: &quot;src_ip&quot;: &quot;213.171.36.194&quot;,</p>
+<p>8816: &quot;session&quot;: &quot;4890fc2a58cb&quot;</p>
+<p>This allowed me to see all the logs for session &ldquo;4890fc2a58cb&rdquo; beginning
+at session connect and ending at session closed.</p>
+<p>All activity was kept local to the host system.</p>
+<h3 id="which-vulnerability-does-the-attack-attempt-to-exploit">
+  Which vulnerability does the attack attempt to exploit?
+  <a class="heading-link" href="#which-vulnerability-does-the-attack-attempt-to-exploit">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The attack does not exploit a CVE. However, it does take advantage of
+default account credentials and living off the land in order to attempt
+to complete it&rsquo;s goal of extracting information from the endpoint.</p>
+<p>MITRE ATT&amp;CK Framework:</p>
+<p>Valid Accounts: Default Accounts</p>
+<p>ID: T1078.001</p>
+<p>Tactics: Initial Access, Defense Evasion, Persistence, Privilege
+Escalation</p>
+<p>&quot;username&quot;: &quot;ubnt&quot;,</p>
+<p>&quot;password&quot;: &quot;ubnt&quot;,</p>
+<p>&quot;message&quot;: &quot;login attempt [ubnt/ubnt] succeeded&quot;</p>
+<p>Command and Scripting Interpreter: Unix Shell</p>
+<p>ID: T1059.004</p>
+<p>Tactic: Execution</p>
+<p>&quot;input&quot;: &quot;sh&quot;</p>
+<p>Data from Local System</p>
+<p>ID: T1005</p>
+<p>Tactic: Collection</p>
+<p>&quot;tftp; wget; /bin/busybox LUJIH&quot;</p>
+<p>Data Transfer Size Limits</p>
+<p>ID: T1030</p>
+<p>Tactic: Exfiltration</p>
+<p>&quot;dd bs=52 count=1 if=.s || cat .s || while read i; do echo $i;
+done &lt; .s&quot;</p>
+<h3 id="what-is-the-goal-of-the-attack">
+  What is the goal of the attack?
+  <a class="heading-link" href="#what-is-the-goal-of-the-attack">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This goal of this attack is to gather and exfiltrate information.</p>
+<p>After establishing initial access using default credentials, the
+attacker proceeds to execute a series of commands by a script given the
+quick nature of the executed commands and their timestamps. All in a
+span of 2-3 seconds. The script enabled several commands that are common
+in a Linux environment. Then it executes the command to open a shell
+&quot;sh&quot; and executes &quot;cat /proc/mounts; /bin/busybox LUJIH&quot; to see the
+status of all mounted file systems as well as execute the custom applet
+LUJIH from busybox which is a software suite that provides several Unix
+utilities in a single executable file.</p>
+<p>LUJIH: applet not found</p>
+<p>The &ldquo;LUJIH&rdquo; applet that was called couldn&rsquo;t execute because it was not
+in the local system. Then the script attempted to collect and exfiltrate
+information by executing the following:</p>
+<p>cd /dev/shm; cat .s || cp /bin/echo .s; /bin/busybox LUJIH</p>
+<p>dd bs=52 count=1 if=.s || cat .s || while read i; do echo $i; done
+&lt; .s</p>
+<p>/bin/busybox LUJIH</p>
+<p>rm .s; exit</p>
+<h3 id="if-the-system-is-vulnerable-do-you-think-the-attack-will-be-successful">
+  If the system is vulnerable, do you think the attack will be successful?
+  <a class="heading-link" href="#if-the-system-is-vulnerable-do-you-think-the-attack-will-be-successful">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Yes. With the attacker knowing what default credentials to use the
+attack can be successful. In this case it didn&rsquo;t work because the custom
+applet for busybox was not in the local endpoint.</p>
+<h3 id="how-can-a-system-be-protected-from-this-attack">
+  How can a system be protected from this attack?
+  <a class="heading-link" href="#how-can-a-system-be-protected-from-this-attack">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>M1027 Password Policies</p>
+<p>Applications and appliances that utilize default username and password
+should be changed immediately after the installation, and before
+deployment to a production environment.</p>
+<p>M1038 Execution Prevention</p>
+<p>Use application control where appropriate.</p>
+<p>M1057 Data Loss Prevention</p>
+<p>Data loss prevention can restrict access to sensitive data and detect
+sensitive data that is unencrypted.</p>
+<p>M1031 Network Intrusion Prevention</p>
+<p>Network intrusion detection and prevention systems that use network
+signatures to identify traffic for specific adversary command and
+control infrastructure and malware can be used to mitigate activity at
+the network level.</p>
+<h3 id="what-do-you-know-about-the-attacker">
+  What do you know about the attacker?
+  <a class="heading-link" href="#what-do-you-know-about-the-attacker">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>• References</p>
+<p>• ThreatIntel</p>
+<p>• Whois Information</p>
+<p>• Shodan</p>
+<p>• CyberGordon</p>
+<p>• AlienVault</p>
+<p>• ISC</p>
+<p>This IP &ldquo;213.171.36.194&rdquo; is owned by &ldquo;JSC Comcor&rdquo; a company based in
+Moscow, Russia. It has been reported to the Internet Storm Center (ISC)
+on 10 October 2018 and last seen on 08 May 2024.</p>
+<p><a href="https://www.shodan.io/host/213.171.36.194"  class="external-link" target="_blank" rel="noopener">https://www.shodan.io/host/213.171.36.194</a></p>
+<p><a href="https://www.virustotal.com/gui/ip-address/213.171.36.194"  class="external-link" target="_blank" rel="noopener">https://www.virustotal.com/gui/ip-address/213.171.36.194</a></p>
+<p><a href="https://isc.sans.edu/ipinfo/213.171.36.194"  class="external-link" target="_blank" rel="noopener">https://isc.sans.edu/ipinfo/213.171.36.194</a></p>
+<p><a href="https://cybergordon.com/r/2f1f9a5a-c682-432a-aa60-c5c2a0dc5fd3"  class="external-link" target="_blank" rel="noopener">https://cybergordon.com/r/2f1f9a5a-c682-432a-aa60-c5c2a0dc5fd3</a></p>
+<p><a href="https://otx.alienvault.com/indicator/ip/213.171.36.194"  class="external-link" target="_blank" rel="noopener">https://otx.alienvault.com/indicator/ip/213.171.36.194</a></p>
+<p><a href="https://www.abuseipdb.com/check/213.171.36.194"  class="external-link" target="_blank" rel="noopener">https://www.abuseipdb.com/check/213.171.36.194</a></p>
+<h3 id="indicator-of-compromise">
+  Indicator of Compromise
+  <a class="heading-link" href="#indicator-of-compromise">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>• IP</p>
+<p>IP: 213.171.36.194</p>
+<p>Analyst Name: Gabriel Mora Date of Analysis: 5/5/2024</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2017 -
+    
+    2024
+     Gabriel Mora 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

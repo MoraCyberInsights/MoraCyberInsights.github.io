@@ -16,6 +16,13 @@
       <description>Is your computer mining for someone else’s gold?&#xD;Link to heading&#xD;By Gabriel Mora&#xA;Introduction&#xA;In the ever-evolving landscape of cybersecurity understanding and mitigating attacks is crucial. Recently, my honeypot detected an intriguing crypto-mining attack originating from China. This blog post details my investigation shedding light on the methods used.&#xA;The Incident&#xA;On May 6th, 2024 my honeypot was targeted by a malicious actor attempting to deploy a crypto-mining payload.</description>
     </item>
     <item>
+      <title>Recon</title>
+      <link>https://moracyberinsights.github.io/posts/recon/</link>
+      <pubDate>Sun, 05 May 2024 12:30:19 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/recon/</guid>
+      <description>Time and Date of Activity 05 May 2024 5:36:11-5:36:12&#xA;Relevant Logs&#xD;Link to heading&#xD;There were 4 firewall logs. All to destination port TCP/23:&#xA;Date Time Source IP Source Port Target IP Target Port Protocol 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 37640 172.31.19.98 23 6 2024-05-05 05:36:11 213.171.36.194 46818 172.31.19.98 23 6 There was 1 telnet log:&#xA;&amp;quot;213.171.36.194&amp;quot;: {&amp;quot;try&amp;quot;: 0, &amp;quot;max&amp;quot;: 1, &amp;quot;user&amp;quot;: &amp;quot;b&#39;ubnt&#39;&amp;quot;, &amp;quot;pw&amp;quot;: &amp;quot;b&#39;ubnt&#39;&amp;quot;}</description>
+    </item>
+    <item>
       <title>Brute Force Attack</title>
       <link>https://moracyberinsights.github.io/posts/bruteforceattack/</link>
       <pubDate>Mon, 19 Feb 2024 12:07:41 -0500</pubDate>
