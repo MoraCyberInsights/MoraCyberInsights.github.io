@@ -16,6 +16,13 @@
       <description>Is your computer mining for someone else’s gold?&#xD;Link to heading&#xD;By Gabriel Mora&#xA;Introduction&#xA;In the ever-evolving landscape of cybersecurity understanding and mitigating attacks is crucial. Recently, my honeypot detected an intriguing crypto-mining attack originating from China. This blog post details my investigation shedding light on the methods used.&#xA;The Incident&#xA;On May 6th, 2024 my honeypot was targeted by a malicious actor attempting to deploy a crypto-mining payload.</description>
     </item>
     <item>
+      <title>Mining Attack Spotlight</title>
+      <link>https://moracyberinsights.github.io/posts/miningattackspotlight/</link>
+      <pubDate>Wed, 22 May 2024 12:35:56 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/miningattackspotlight/</guid>
+      <description>Time and Date of Activity 06 May 2024 02:54&#xA;Relevant Logs, Malware Analysis&#xD;Link to heading&#xD;There were 2 firewall logs for the source IP &amp;ldquo;39.108.186.231&amp;rdquo; that was tracked.&#xA;**Date Time Source IP Source Port Target IP Target Port Protocol** 2024-05-06 02:54:17 39.108.186.231 16525 172.31.19.98 2222 6 2024-05-06 02:54:28 39.108.186.231 37700 172.31.19.98 2222 6 Firewall data was obtained through the ISC portal.&#xA;To choose the attack to research the &amp;ldquo;playlog&amp;rdquo; feature of the honeypot was used to investigate some attacks that took place.</description>
+    </item>
+    <item>
       <title>Recon</title>
       <link>https://moracyberinsights.github.io/posts/recon/</link>
       <pubDate>Sun, 05 May 2024 12:30:19 -0500</pubDate>
