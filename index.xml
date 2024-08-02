@@ -22,5 +22,12 @@
       <guid>https://moracyberinsights.github.io/about/</guid>
       <description>Welcome to Mora Cyber Insights. This is a personal blog where I&amp;rsquo;ll be posting about attack spotlights from a honeypot, CTF write-ups, independent research, malware analysis, investigation scenarios, and anything related to DFIR. All content posted here is personal and does not reflect the view of my employer(s).</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://moracyberinsights.github.io/posts/brute-force-attack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/brute-force-attack/</guid>
+      <description>Time and Date of Activity 18 February 2024 4:46:25-5:17:02 UTC&#xA;Relevant Logs&#xD;Link to heading&#xD;There were 1412 firewall logs. All to destination port TCP/2222.&#xA;There were 688 SSH/Telnet logs. All using the &amp;ldquo;root&amp;rdquo; username.&#xA;Reviewing all logs for the month of February there was no other activity originating from this IP (162.14.74.230).&#xA;Sample of the Firewall logs:&#xA;Date, Time, Source IP, Source Port, Destination IP, Destination port, protocol&#xA;2024-02-18 00:00:00 0001-01-01 04:46:25 162.</description>
+    </item>
   </channel>
 </rss>
