@@ -16,6 +16,34 @@
       <description>Is your computer mining for someone else’s gold?&#xD;Link to heading&#xD;By Gabriel Mora&#xA;Introduction&#xA;In the ever-evolving landscape of cybersecurity understanding and mitigating attacks is crucial. Recently, my honeypot detected an intriguing crypto-mining attack originating from China. This blog post details my investigation shedding light on the methods used.&#xA;The Incident&#xA;On May 6th, 2024 my honeypot was targeted by a malicious actor attempting to deploy a crypto-mining payload.</description>
     </item>
     <item>
+      <title>Brute2</title>
+      <link>https://moracyberinsights.github.io/posts/brute2/</link>
+      <pubDate>Wed, 29 May 2024 17:32:04 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/brute2/</guid>
+      <description>Time and Date of Activity 5/29/2024 3:17:15 AM - 1:51:16 PM&#xA;Relevant Logs:&#xD;Link to heading&#xD;There were 206 firewall logs of attempts made from source IP 159.89.163.155 all to destination port 2222.&#xA;Sample of the firewall logs:&#xA;**Date Time Source IP Source Port Dest IP Dest port protocol** 2024-05-29 02:34:37 159.89.163.155 56926 172.31.19.98 2222 6 2024-05-29 02:44:58 159.89.163.155 38986 172.31.19.98 2222 6 2024-05-29 02:46:00 159.89.163.155 56076 172.31.19.98 2222 6 2024-05-29 02:47:01 159.</description>
+    </item>
+    <item>
+      <title>SIPrecon</title>
+      <link>https://moracyberinsights.github.io/posts/siprecon/</link>
+      <pubDate>Wed, 29 May 2024 17:24:26 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/siprecon/</guid>
+      <description>Time and Date of Activity May 29 09:14:56 - May 29 09:16:03&#xA;Relevant Logs, Malware Analysis:&#xD;Link to heading&#xD;The IP (134.209.232.25) was seen 15 times connecting to the honeypot all with destination port 23. The attacker used the following username and password combination to access the honeypot:&#xA;username:&amp;ldquo;OPTIONS sip:nm SIP/2.0&amp;rdquo;&#xA;Password:&amp;ldquo;Via: SIP/2.0/TCP nm;branch=foo&amp;quot;&#xA;Sample of firewall logs:&#xA;[ 4883.082842] DSHIELDINPUT IN=eth0 OUT= MAC=06:26:77:94:62:f1:06:14:ce:62:12:f7:08:00 SRC=134.209.232.25 DST=172.31.19.98 LEN=60 TOS=0x00 PREC=0x00 TTL=46 ID=9395 DF PROTO=TCP SPT=57505 DPT=23 WINDOW=64240 RES=0x00 SYN URGP=0</description>
+    </item>
+    <item>
+      <title>ea73Malware</title>
+      <link>https://moracyberinsights.github.io/posts/ea73malware/</link>
+      <pubDate>Tue, 28 May 2024 17:17:34 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/ea73malware/</guid>
+      <description>Time and Date of Activity 2024-05-25 13:19:55&#xA;Relevant Logs, Malware Analysis:&#xD;Link to heading&#xD;There were 2 firewall logs for this IP. They were obtained manually from the honeypot by going to &amp;ldquo;/var/log&amp;rdquo; and using &amp;ldquo;grep -r &amp;lsquo;218.92.0.60&amp;rsquo;&amp;rdquo; to filter by source IP of the attacker.&#xA;**Date Time Source IP Source Port Target IP Target Port Protocol 2024-05-22 23:34:46 218.92.0.60 55026 172.31.19.98 22 6 2024-05-25 13:19:55 218.92.0.60 19903 172.31.19.98 22 6 Looked in the &amp;ldquo;/srv/cowrie/var/lib/cowrie/downloads&amp;rdquo; directory to see recent downloads.</description>
+    </item>
+    <item>
+      <title>Crypto Malware Observation</title>
+      <link>https://moracyberinsights.github.io/posts/cryptomalware/</link>
+      <pubDate>Tue, 28 May 2024 17:06:25 -0500</pubDate>
+      <guid>https://moracyberinsights.github.io/posts/cryptomalware/</guid>
+      <description>Time and Date of Activity 2024-05-25 07:11:48&#xA;Relevant Logs, Malware Analysis:&#xD;Link to heading&#xD;There were 4 firewall logs. All from Source IP &amp;ldquo;151.115.58.49&amp;rdquo; using source ports &amp;ldquo;42256 &amp;amp; 42266&amp;rdquo;. Logs were obtained from the ISC portal.&#xA;**Date Time Source IP Source Port Target IP Target Port Protocol 2024-05-25 07:11:48 151.115.58.49 42256 172.31.19.98 22 6 2024-05-25 07:11:49 151.115.58.49 42266 172.31.19.98 22 6 2024-05-25 07:11:48 151.115.58.49 42256 172.31.19.98 22 6 2024-05-25 07:11:49 151.</description>
+    </item>
+    <item>
       <title>Mining Attack Spotlight</title>
       <link>https://moracyberinsights.github.io/posts/miningattackspotlight/</link>
       <pubDate>Wed, 22 May 2024 12:35:56 -0500</pubDate>
