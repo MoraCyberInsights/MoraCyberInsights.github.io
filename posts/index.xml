@@ -16,7 +16,7 @@
       <description>Is your computer mining for someone else’s gold?&#xD;Link to heading&#xD;By Gabriel Mora&#xA;Introduction&#xA;In the ever-evolving landscape of cybersecurity understanding and mitigating attacks is crucial. Recently, my honeypot detected an intriguing crypto-mining attack originating from China. This blog post details my investigation shedding light on the methods used.&#xA;The Incident&#xA;On May 6th, 2024 my honeypot was targeted by a malicious actor attempting to deploy a crypto-mining payload.</description>
     </item>
     <item>
-      <title></title>
+      <title>Brute Force Attack</title>
       <link>https://moracyberinsights.github.io/posts/bruteforceattack/</link>
       <pubDate>Mon, 19 Feb 2024 12:07:41 -0500</pubDate>
       <guid>https://moracyberinsights.github.io/posts/bruteforceattack/</guid>

@@ -23,7 +23,7 @@
       <description>Welcome to Mora Cyber Insights. This is a personal blog where I&amp;rsquo;ll be posting about attack spotlights from a honeypot, CTF write-ups, independent research, malware analysis, investigation scenarios, and anything related to DFIR. All content posted here is personal and does not reflect the view of my employer(s).</description>
     </item>
     <item>
-      <title></title>
+      <title>Brute Force Attack</title>
       <link>https://moracyberinsights.github.io/posts/bruteforceattack/</link>
       <pubDate>Mon, 19 Feb 2024 12:07:41 -0500</pubDate>
       <guid>https://moracyberinsights.github.io/posts/bruteforceattack/</guid>
